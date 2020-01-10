@@ -33,8 +33,8 @@ class App extends Component{
               <button onClick={this.addRow}>Add Row</button>
               <button onClick={this.addCol}>Add Column</button>
             </div>
-	          <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
-	           </div>
+	           <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
+	          </div>
 
     }
 }
