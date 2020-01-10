@@ -9,13 +9,23 @@ class App extends Component{
     this.state = {
       rows:2,
       cols:2,
-      color:"red"
+      fillColor:"red"
     }
   }
   selectColor = () => {
 
   }
+  addRow = () => {
+    this.setState({rows:this.state.rows+1})
+  }
+  addCol = () => {
+    this.setState({cols:this.state.cols+1})
+  }
   render(){
+    let rowArr = []
+    for(let i = 0; i < this.state.rows; i++){
+      rowArr.push(i)
+    }
     return  <div>
             <div id="dropdown">
               <select id="color" >
@@ -24,9 +34,15 @@ class App extends Component{
                   <option value="blue">Blue</option>
               </select>
             </div>
+            <div>
+              <button onClick={this.addRow}>Add Row</button>
+              <button onClick={this.addCol}>Add Column</button>
+            </div>
             <table id="main-grid" align="center">
             <tbody>
-              <TableRow cols = {this.state.col}/>
+              {rowArr.map(() => {
+                return <TableRow cols={this.state.cols} fillColor={this.state.fillColor}/>
+              })}
             </tbody>
             </table>
             </div>
