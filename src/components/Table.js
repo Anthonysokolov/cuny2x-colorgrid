@@ -4,11 +4,6 @@ import TableRow from './TableRow.js'
 class Table extends Component{
   constructor(props){
   	super(props)
-    /*
-    let arr = []
-    for(let i = 0; i < props.rows; i++){
-      arr.push(<TableRow numCols={props.cols} fillColor={props.fillColor}/>)
-    }*/
   }
   fillRows = () => {
     let arr = []

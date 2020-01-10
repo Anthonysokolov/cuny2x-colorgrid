@@ -11,8 +11,8 @@ class App extends Component{
   	    fillColor:"red"
 	}
   }
-  selectColor = () => {
-
+  selectColor = (event) => {
+     this.setState({fillColor:event.target.value})
   }
   addRow = () => {
      this.setState({rows:this.state.rows+1})
@@ -23,22 +23,18 @@ class App extends Component{
   render(){
 	return  <div>
             <div id="dropdown">
-            <select id="color" >
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            </select>
+              <select id="color" onChange={this.selectColor}>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+              </select>
             </div>
             <div>
-            <button onClick={this.addRow}>Add Row</button>
-            <button onClick={this.addCol}>Add Column</button>
+              <button onClick={this.addRow}>Add Row</button>
+              <button onClick={this.addCol}>Add Column</button>
             </div>
-
-
 	          <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
-
-
-	</div>
+	           </div>
 
     }
 }
