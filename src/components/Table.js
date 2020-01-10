@@ -2,16 +2,28 @@ import React, {Component} from 'react'
 import TableRow from './TableRow.js'
 
 class Table extends Component{
-    constructor(props){
-	super(props)
-	this.state = {
-	    rows: props.rows,
-	    cols: props.cols,
-	    fillColor: props.fillColor
-	}
+  constructor(props){
+  	super(props)
+  	this.state = {
+  	    numRows: props.rows,
+  	    numCols: props.cols,
+        rows:[],
+  	    fillColor: props.fillColor
+  	}
+  }
+  componentDidMount(){
+    this.fillRows()
+  }
+  fillRows = () => {
+    let arr = []
+    for(let i = 0; i < this.state.numRows; i++){
+      arr.push(<TableRow numCols={this.state.numCols} fillColor={this.state.fillColor}/>)
     }
-    render(){
-	return (<tbody><TableRow /></tbody>);
+    this.setState({rows:arr})
+  }
+  render(){
+    console.log(this.state.rows)
+	    return <tbody>{this.state.rows.map(row => row)}</tbody>;
     }
 }
 

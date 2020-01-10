@@ -3,24 +3,24 @@ import './App.css';
 import Table from "./components/Table.js"
 
 class App extends Component{
-    constructor(props){
-	super(props)
-	this.state = {
-	    rows:2,
-	    cols:2,
-	    fillColor:"red"
+  constructor(props){
+  	super(props)
+  	this.state = {
+  	    rows:2,
+  	    cols:2,
+  	    fillColor:"red"
 	}
-    }
-    selectColor = () => {
+  }
+  selectColor = () => {
 
-    }
-    addRow = () => {
-	this.setState({rows:this.state.rows+1})
-    }
-    addCol = () => {
-	this.setState({cols:this.state.cols+1})
-    }
-    render(){
+  }
+  addRow = () => {
+     this.setState({rows:this.state.rows+1})
+  }
+  addCol = () => {
+     this.setState({cols:this.state.cols+1})
+  }
+  render(){
 	return  <div>
             <div id="dropdown">
             <select id="color" >
@@ -33,11 +33,11 @@ class App extends Component{
             <button onClick={this.addRow}>Add Row</button>
             <button onClick={this.addCol}>Add Column</button>
             </div>
-	    
+
             <table id="main-grid" align="center">
-	    <Table rows={this.state.rows} cols={this.state.cols} fillColor={this.state.fillColor}/>
+	           <Table rows={this.state.rows} cols={this.state.cols} fillColor={this.state.fillColor}/>
 	    </table>
-	    
+
 	</div>
 
     }

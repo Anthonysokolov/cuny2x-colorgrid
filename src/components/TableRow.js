@@ -3,35 +3,25 @@ import Cell from './cell.js'
 
 class TableRow extends Component{
     constructor(props){
-	super(props)
-	this.state = {
-	    rows: props.rows,
-	    cols: props.cols,
-	    fillColor: props.fillColor
-	}
+    	super(props)
+    	this.state = {
+    	    numCols: props.numCols,
+          cells:[],
+    	    fillColor: props.fillColor
+    	}
     }
-
+    componentDidMount(){
+      this.addCells()
+    }
     addCells = () => {
-	let colArr = [];
-	for(let i = 0; i < this.state.cols; i++){
-	    colArr.push("");
-	}
-	let result = colArr.map( () => (
-		<Cell fillColor={this.state.fillColor}/>
-	));
-	console.log(result);
-	return result;
+    	let arr = [];
+    	for(let i = 0; i < this.state.numCols; i++){
+          arr.push(<Cell fillColor={this.state.fillColor}/>)
+    	}
+    	this.setState({cells:arr})
     }
-    
     render(){
-	let rowArr = [];
-	for(let i = 0; i < this.state.rows; i++){
-	    rowArr.push("");
-	}
-	let result = rowArr.map( () => (
-		<tr>{this.addCells()}</tr>
-	));
-	return result;
+    	return <tr>{this.state.cells.map(cell => cell)}</tr>
     }
 }
 
