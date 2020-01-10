@@ -43,7 +43,8 @@ class App extends Component{
 	  <button onClick={this.removeCol}>Remove Column</button>
 	  <button>Fill Uncolored</button>
 	  <button>Fill All</button>
-            </div>
+	  <button>Clear All</button>
+      </div>
 	           <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
 	          </div>
 
