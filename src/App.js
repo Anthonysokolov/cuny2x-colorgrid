@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Cell from "./components/cell.js"
+import TableRow from "./components/TableRow.js"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      rows:2,
+      cols:2,
+      fillColor:"red"
+    }
+  }
+  selectColor = () => {
+
+  }
+  addRow = () => {
+    this.setState({rows:this.state.rows+1})
+  }
+  addCol = () => {
+    this.setState({cols:this.state.cols+1})
+  }
+  render(){
+    let rowArr = []
+    for(let i = 0; i < this.state.rows; i++){
+      rowArr.push(i)
+    }
+    return  <div>
+            <div id="dropdown">
+              <select id="color" >
+                  <option value="red">Red</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+              </select>
+            </div>
+            <div>
+              <button onClick={this.addRow}>Add Row</button>
+              <button onClick={this.addCol}>Add Column</button>
+            </div>
+            <table id="main-grid" align="center">
+            <tbody>
+              {rowArr.map(() => {
+                return <TableRow cols={this.state.cols} fillColor={this.state.fillColor}/>
+              })}
+            </tbody>
+            </table>
+            </div>
+
+  }
 }
 
 export default App;
