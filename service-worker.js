@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cuny2x-colorgrid/precache-manifest.72da399c952847a5ed8505d2c4c57ad6.js"
+  "/cuny2x-colorgrid/precache-manifest.5f145dd56695e7d5371f1d2594d86b03.js"
 );
 
 self.addEventListener('message', (event) => {
