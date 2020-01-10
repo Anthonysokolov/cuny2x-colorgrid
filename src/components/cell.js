@@ -7,11 +7,10 @@ class Cell extends Component{
     super(props)
     this.state = {
       cellColor:"white-cell",
-      fillColor:props.fillColor + "-cell"
     }
   }
   fillCell = () => {
-    this.setState({cellColor:this.state.fillColor})
+    this.setState({cellColor:this.props.fillColor+"-cell"})
   }
   render(){
     return  <td className={this.state.cellColor} onClick={this.fillCell}></td>
