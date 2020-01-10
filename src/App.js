@@ -25,6 +25,8 @@ class App extends Component{
     }
       removeCol = () => {
      this.setState({cols:this.state.cols-1})
+      }
+    clear = () => {
   }
 
   render(){
@@ -43,7 +45,7 @@ class App extends Component{
 	  <button onClick={this.removeCol}>Remove Column</button>
 	  <button>Fill Uncolored</button>
 	  <button>Fill All</button>
-	  <button>Clear All</button>
+	  <button onClick={this.clear}>Clear All</button>
       </div>
 	           <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
 	          </div>
