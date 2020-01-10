@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Cell from "./components/cell.js"
+import TableRow from "./components/TableRow.js"
 
 class App extends Component{
   constructor(props){
@@ -25,9 +26,7 @@ class App extends Component{
             </div>
             <table id="main-grid" align="center">
             <tbody>
-              <tr>
-                  <Cell color = "red"/>
-              </tr>
+              <TableRow cols = {this.state.col}/>
             </tbody>
             </table>
             </div>

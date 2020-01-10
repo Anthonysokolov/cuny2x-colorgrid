@@ -1,6 +1,15 @@
 td{
-
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border: thin solid black;
 }
 .red-cell{
   background-color: red;
+}
+.green-cell{
+  background-color: green;
+}
+.blue-cell{
+  background-color: blue;
 }
