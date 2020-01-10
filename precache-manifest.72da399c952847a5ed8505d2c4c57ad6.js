@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1369f86f3fee05ad53a406bb3be54912",
+    "revision": "d610d6725a6c02019b35c4c4b2e17078",
     "url": "/cuny2x-colorgrid/index.html"
   },
   {
-    "revision": "e0443cb7e619afe32c0b",
+    "revision": "0e85dd96e78635d3f288",
     "url": "/cuny2x-colorgrid/static/css/main.d966042f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/cuny2x-colorgrid/static/js/2.8f66ba17.chunk.js.LICENSE"
   },
   {
-    "revision": "e0443cb7e619afe32c0b",
-    "url": "/cuny2x-colorgrid/static/js/main.c0ca2a15.chunk.js"
+    "revision": "0e85dd96e78635d3f288",
+    "url": "/cuny2x-colorgrid/static/js/main.b7756ad7.chunk.js"
   },
   {
     "revision": "518a6590f7b68a8aac95",

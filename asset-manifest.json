@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cuny2x-colorgrid/static/css/main.d966042f.chunk.css",
-    "main.js": "/cuny2x-colorgrid/static/js/main.c0ca2a15.chunk.js",
-    "main.js.map": "/cuny2x-colorgrid/static/js/main.c0ca2a15.chunk.js.map",
+    "main.js": "/cuny2x-colorgrid/static/js/main.b7756ad7.chunk.js",
+    "main.js.map": "/cuny2x-colorgrid/static/js/main.b7756ad7.chunk.js.map",
     "runtime-main.js": "/cuny2x-colorgrid/static/js/runtime-main.db42886e.js",
     "runtime-main.js.map": "/cuny2x-colorgrid/static/js/runtime-main.db42886e.js.map",
     "static/js/2.8f66ba17.chunk.js": "/cuny2x-colorgrid/static/js/2.8f66ba17.chunk.js",
     "static/js/2.8f66ba17.chunk.js.map": "/cuny2x-colorgrid/static/js/2.8f66ba17.chunk.js.map",
     "index.html": "/cuny2x-colorgrid/index.html",
-    "precache-manifest.b0bae010d868c489e6b9e2075e45d9c0.js": "/cuny2x-colorgrid/precache-manifest.b0bae010d868c489e6b9e2075e45d9c0.js",
+    "precache-manifest.72da399c952847a5ed8505d2c4c57ad6.js": "/cuny2x-colorgrid/precache-manifest.72da399c952847a5ed8505d2c4c57ad6.js",
     "service-worker.js": "/cuny2x-colorgrid/service-worker.js",
     "static/css/main.d966042f.chunk.css.map": "/cuny2x-colorgrid/static/css/main.d966042f.chunk.css.map",
     "static/js/2.8f66ba17.chunk.js.LICENSE": "/cuny2x-colorgrid/static/js/2.8f66ba17.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.db42886e.js",
     "static/js/2.8f66ba17.chunk.js",
     "static/css/main.d966042f.chunk.css",
-    "static/js/main.c0ca2a15.chunk.js"
+    "static/js/main.b7756ad7.chunk.js"
   ]
 }
