@@ -20,6 +20,13 @@ class App extends Component{
   addCol = () => {
      this.setState({cols:this.state.cols+1})
   }
+    removeRow = () => {
+	this.setState({rows:this.state.rows-1})
+    }
+      removeCol = () => {
+     this.setState({cols:this.state.cols-1})
+  }
+
   render(){
 	return  <div>
             <div id="dropdown">
@@ -29,9 +36,13 @@ class App extends Component{
                 <option value="blue">Blue</option>
               </select>
             </div>
-            <div>
+            <div id="button_features">
               <button onClick={this.addRow}>Add Row</button>
-              <button onClick={this.addCol}>Add Column</button>
+          <button onClick={this.addCol}>Add Column</button>
+	  <button onClick={this.removeRow}>Remove Row</button>
+	  <button onClick={this.removeCol}>Remove Column</button>
+	  <button>Fill Uncolored</button>
+	  <button>Fill All</button>
             </div>
 	           <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
 	          </div>
