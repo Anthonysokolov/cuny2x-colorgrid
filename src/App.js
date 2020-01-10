@@ -34,9 +34,9 @@ class App extends Component{
             <button onClick={this.addCol}>Add Column</button>
             </div>
 
-            <table id="main-grid" align="center">
-	           <Table rows={this.state.rows} cols={this.state.cols} fillColor={this.state.fillColor}/>
-	    </table>
+
+	          <Table numRows={this.state.rows} numCols={this.state.cols} fillColor={this.state.fillColor}/>
+
 
 	</div>
 

@@ -4,26 +4,21 @@ import TableRow from './TableRow.js'
 class Table extends Component{
   constructor(props){
   	super(props)
-  	this.state = {
-  	    numRows: props.rows,
-  	    numCols: props.cols,
-        rows:[],
-  	    fillColor: props.fillColor
-  	}
-  }
-  componentDidMount(){
-    this.fillRows()
+    /*
+    let arr = []
+    for(let i = 0; i < props.rows; i++){
+      arr.push(<TableRow numCols={props.cols} fillColor={props.fillColor}/>)
+    }*/
   }
   fillRows = () => {
     let arr = []
-    for(let i = 0; i < this.state.numRows; i++){
-      arr.push(<TableRow numCols={this.state.numCols} fillColor={this.state.fillColor}/>)
+    for(let i = 0; i < this.props.numRows; i++){
+      arr.push(<TableRow numCols={this.props.numCols} fillColor={this.props.fillColor}/>)
     }
-    this.setState({rows:arr})
+    return arr
   }
   render(){
-    console.log(this.state.rows)
-	    return <tbody>{this.state.rows.map(row => row)}</tbody>;
+	    return <table align="center"><tbody>{this.fillRows()}</tbody></table>;
     }
 }
 
